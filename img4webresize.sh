@@ -1,3 +1,7 @@
+#!/bin/bash
+
+convert -version
+ 
 PREFIX=$2;
 NEWSIZE=$1;
 for i in ${*:3};
