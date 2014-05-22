@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# use a shellscript like ~/bin/tatort-dl.sh "$(~/bin/tatort-dl-current-url.py)" for cron
 import urllib2
 url="http://www.ardmediathek.de/ard/servlet/ajax-cache/3516962/view=list/documentId=602916/goto=1"
 
