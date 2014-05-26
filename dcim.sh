@@ -1,11 +1,18 @@
 #!/bin/bash
+################################################################################
 # sudo apt-get install libimage-exiftool-perl
-
+#
+# todo: only apply for .jpg, if .avi comes along, use EXIF data from .THM with same name as it is the preview image on canon cameras
+################################################################################
+ 
 #path to search images
 dcim_path=( $(echo "/media/*/DCIM") )
-
+ 
 # The date pattern for the destination dir (see strftime)
 DEST_DIR_PATTERN="%Y/%m/%d/%Y_%m_%d_%H_%M_%S"
+
+
+################################################################################
 
 # find numbered subfolder(s)
 imagefolder=( $(ls $dcim_path) )
