@@ -2,6 +2,8 @@
 ################################################################################
 # sudo apt-get install libimage-exiftool-perl
 #
+# source of inspiration: http://blog.irisquest.net/2008/05/ubuntu-organize-photos-in-folders-by_7784.html
+#
 # todo: only apply for .jpg, if .avi comes along, use EXIF data from .THM with same name as it is the preview image on canon cameras
 ################################################################################
  
