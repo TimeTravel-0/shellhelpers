@@ -6,8 +6,9 @@ import sys
 
 def dlurl(url,filen):
     file = urllib2.urlopen(url)
+    data = file.read()
     output = open(filen,'wb')
-    output.write(file.read())
+    output.write(data)
 
 print "mausloader"
 # get xml
@@ -26,5 +27,10 @@ for item in itemlist:
     url = item.getElementsByTagName('enclosure')[0].attributes['url'].value
 
     realtitle = title[title.find(', ')+2:]
-    print realtitle
-    dlurl(url,os.path.join(dldir,realtitle.replace('/','')+'.mp4'))
+    fname = os.path.join(dldir,realtitle.replace('/','')+'.mp4')
+
+    print fname
+    if(os.path.isfile(fname)):
+        print "exists..."
+    else:
+        dlurl(url,fname)
